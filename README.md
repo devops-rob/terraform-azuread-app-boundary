@@ -1,6 +1,6 @@
-# Azure AD Application Registration for HashiCorp Vault
+# Azure AD Application Registration for HashiCorp Boundary
 
-This Terraform module creates an application in Azure AD for HashiCorp Vault to use when configuring Azure OIDC authentication and the Azure secrets engine. The application is configured with the correct Graph API permission required to perform these functions. Admin consent will still need to be granted for this permission in default directory.
+This Terraform module creates an application in Azure AD for HashiCorp Boundary to use when configuring Azure OIDC authentication. The application is configured with the correct Graph API permission required to perform these functions. Admin consent will still need to be granted for this permission in default directory.
 
 The permission granted to this application is `GroupMember.Read.All` which is the least privileged access permission required for this function.
 

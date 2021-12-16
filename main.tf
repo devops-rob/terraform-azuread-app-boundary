@@ -68,10 +68,10 @@ resource "azuread_directory_role" "cloud_application_administrator" {
 
 #resource "azuread_directory_role_member" "Cloud_application_administrator" {
 #  role_object_id   = azuread_directory_role.cloud_application_administrator.object_id
-#  member_object_id = azuread_application.vault.object_id
+#  member_object_id = azuread_application.boundary.object_id
 #}
 
-resource "azuread_application_password" "vault" {
-  display_name          = "Vault"
+resource "azuread_application_password" "boundary" {
+  display_name          = "boundary"
   application_object_id = azuread_application.boundary.object_id
 }

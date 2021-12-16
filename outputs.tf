@@ -10,12 +10,12 @@ output "application_id" {
 
 
 output "client_secret" {
-  value = azuread_application_password.vault.value
+  value = azuread_application_password.boundary.value
   sensitive = true
 }
 
 output "client_secret_id" {
-  value = azuread_application_password.vault.id
+  value = azuread_application_password.boundary.id
 }
 
 output "application_name" {
