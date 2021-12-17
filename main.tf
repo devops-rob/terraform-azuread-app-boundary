@@ -75,3 +75,8 @@ resource "azuread_application_password" "boundary" {
   display_name          = "boundary"
   application_object_id = azuread_application.boundary.object_id
 }
+
+resource "azuread_service_principal" "boundary" {
+  application_id = azuread_application.boundary.application_id
+  owners = [data.azuread_client_config.current.object_id]
+}
